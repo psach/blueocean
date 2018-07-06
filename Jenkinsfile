@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('SVN Checkout') {
       steps {
-        build 'mvn install'
+        readTrusted 'http://www.google.com/svn'
       }
     }
   }
